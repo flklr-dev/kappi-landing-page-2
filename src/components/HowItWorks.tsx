@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
-import { Camera, Brain, CheckCircle } from "lucide-react";
+import { Camera, Scan, CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
     icon: Camera,
     title: "Capture",
-    description: "Take a photo of affected plant parts using your smartphone camera",
-    step: "01",
+    description: "Take a clear photo of the affected leaf or fruit using your smartphone's camera.",
+    step: 1,
   },
   {
-    icon: Brain,
+    icon: Scan,
     title: "Analyze",
-    description: "Our AI analyzes the image to detect diseases and their severity",
-    step: "02",
+    description: "Our AI model instantly scans the visual patterns to identify disease markers.",
+    step: 2,
   },
   {
-    icon: CheckCircle,
-    title: "Act",
-    description: "Receive immediate treatment recommendations to save your crop",
-    step: "03",
+    icon: CheckCircle2,
+    title: "Resolve",
+    description: "Get immediate treatment recommendations and prevention tips to save your crop.",
+    step: 3,
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-20 md:py-32 bg-zinc-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,47 +33,56 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Simple Steps to Protect Your{" "}
-            <span className="text-primary">Coffee Plants</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+            Simple Steps to <span className="text-primary">Healthier Crops</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Getting started with KAPPI is easy. Just three simple steps to healthier crops.
+          <p className="text-zinc-500 max-w-2xl mx-auto">
+            No complex equipment needed. Just you, your phone, and our intelligent diagnostic engine working together in seconds.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Connecting Lines for Desktop */}
-          <div className="hidden md:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
+        <div className="relative">
+          {/* Process Flow Line */}
+          <div className="hidden md:block absolute top-12 left-[16%] right-[16%] border-t-2 border-dashed border-zinc-300 -z-10" />
 
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative"
-            >
-              <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-2 relative z-10">
-                {/* Step Number */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-soft">
-                  {step.step}
-                </div>
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className="group flex flex-col items-center"
+                >
+                  {/* Floating Squircle Card */}
+                  <div className="relative">
+                    {/* Badge Step Number */}
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-zinc-900 text-white flex items-center justify-center text-sm font-bold border-4 border-zinc-50 z-10">
+                      {step.step}
+                    </div>
 
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 mx-auto">
-                  <step.icon className="w-8 h-8 text-primary" />
-                </div>
+                    {/* Icon Container */}
+                    <div className="w-24 h-24 rounded-3xl bg-white border-2 border-zinc-200 flex items-center justify-center transition-all duration-300 group-hover:border-primary group-hover:shadow-md">
+                      <Icon className="w-10 h-10 text-zinc-700" strokeWidth={1.5} />
+                    </div>
+                  </div>
 
-                <h3 className="text-2xl font-bold text-foreground mb-3 text-center">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-center">
-                  {step.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-zinc-900 mt-6 mb-3">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-zinc-500 text-center leading-relaxed max-w-xs">
+                    {step.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

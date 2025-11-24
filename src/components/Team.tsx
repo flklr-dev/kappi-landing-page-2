@@ -3,35 +3,35 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const developers = [
   {
-    name: "Developer Name 1",
-    role: "Frontend Developer",
+    name: "Jenny Babe C. Arac",
+    role: "Project Manager & Backend Developer",
     responsibilities: "UI/UX design and React Native mobile app development",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dev1",
   },
   {
-    name: "Developer Name 2",
-    role: "ML Engineer",
+    name: "Kit Adrian B. Diocares",
+    role: "Mobile App Developer & ML Engineer",
     responsibilities: "Machine learning model development and TensorFlow implementation",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dev2",
   },
   {
-    name: "Developer Name 3",
-    role: "Backend Developer",
+    name: "Francis Lloyd G. Catog",
+    role: "Front Developer & Quality Assurance",
     responsibilities: "API development, database management, and server infrastructure",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dev3",
   },
 ];
 
 const adviser = {
-  name: "Dr. Adviser Name",
-  title: "Professor of Computer Science",
+  name: "Dr. Lanie Laureano",
+  title: "Associate Professor of Information Technology",
   role: "Providing technical guidance and industry expertise for the KAPPI project development",
   image: "https://api.dicebear.com/7.x/avataaars/svg?seed=adviser",
 };
 
 const Team = () => {
   return (
-    <section className="py-20 md:py-32 bg-secondary/30">
+    <section id="team" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* Developers Section */}
         <motion.div

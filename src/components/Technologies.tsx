@@ -1,66 +1,53 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Smartphone, Shield, Wrench } from "lucide-react";
 
-const techCategories = [
+const technologies = [
   {
-    category: "Frontend",
-    icon: Code2,
-    color: "primary",
-    technologies: [
-      { name: "React", description: "Building responsive user interfaces" },
-      { name: "React Native", description: "Cross-platform mobile development" },
-      { name: "TypeScript", description: "Type-safe development" },
-      { name: "Shadcn UI", description: "Beautiful, accessible UI components" },
-    ],
+    name: "React Native",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    category: "Backend",
-    icon: Database,
-    color: "accent",
-    technologies: [
-      { name: "Node.js & Express", description: "RESTful API backend" },
-      { name: "MongoDB", description: "Flexible, scalable data storage" },
-      { name: "Cloudinary", description: "Secure image hosting" },
-    ],
+    name: "TypeScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
-    category: "Machine Learning",
-    icon: Brain,
-    color: "primary",
-    technologies: [
-      { name: "TensorFlow", description: "Training ML models" },
-      { name: "Python", description: "Data science and ML" },
-      { name: "TensorFlow Lite", description: "On-device ML inference" },
-    ],
+    name: "CSS",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
-    category: "Mobile Development",
-    icon: Smartphone,
-    color: "accent",
-    technologies: [
-      { name: "Expo", description: "Streamlined mobile development" },
-      { name: "React Native", description: "Native mobile experiences" },
-    ],
+    name: "Node.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
-    category: "Security",
-    icon: Shield,
-    color: "primary",
-    technologies: [
-      { name: "JWT", description: "Secure authentication" },
-      { name: "Bcrypt", description: "Password hashing" },
-      { name: "SecureStorage", description: "Secure data storage" },
-    ],
+    name: "Express.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
-    category: "Development Tools",
-    icon: Wrench,
-    color: "accent",
-    technologies: [
-      { name: "Git", description: "Version control" },
-      { name: "ESLint", description: "Code quality" },
-      { name: "Prettier", description: "Code formatting" },
-    ],
+    name: "MongoDB",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "Firebase",
+    logo: "https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg",
+  },
+  {
+    name: "Cloudinary",
+    logo: "https://www.svgrepo.com/show/353566/cloudinary.svg",
+  },
+  {
+    name: "AWS",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+  },
+  {
+    name: "GitHub",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    name: "TensorFlow",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
+    name: "Python",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
 ];
 
@@ -84,42 +71,26 @@ const Technologies = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techCategories.map((category, index) => (
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12">
+          {technologies.map((tech, index) => (
             <motion.div
-              key={category.category}
+              key={tech.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              className="flex flex-col items-center gap-3"
             >
-              <div className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-soft transition-all duration-300 hover:-translate-y-1 h-full">
-                <div className={`w-12 h-12 rounded-xl ${
-                  category.color === "primary" ? "bg-primary/10" : "bg-accent/10"
-                } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className={`w-6 h-6 ${
-                    category.color === "primary" ? "text-primary" : "text-accent"
-                  }`} />
-                </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {category.category}
-                </h3>
-
-                <div className="space-y-3">
-                  {category.technologies.map((tech) => (
-                    <div key={tech.name} className="border-l-2 border-primary/20 pl-3">
-                      <p className="font-semibold text-foreground text-sm">
-                        {tech.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {tech.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                <img
+                  src={tech.logo}
+                  alt={tech.name}
+                  className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
               </div>
+              <p className="text-sm text-center text-muted-foreground font-medium">
+                {tech.name}
+              </p>
             </motion.div>
           ))}
         </div>

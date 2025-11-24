@@ -1,0 +1,138 @@
+KAPPI - TERMS & CONDITIONSLast Updated: November 24, 2025Welcome to KAPPI ("we," "our," or "us"). Please read these Terms & Conditions ("Terms") carefully before using our mobile application ("App"). By downloading or using the App, you agree to be bound by these Terms.
+1. Acceptance of Terms
+By accessing or using the App, you confirm that you accept these Terms and agree to comply with them. If you do not agree, you must not use the App.
+2. Eligibility
+You must be at least 13 years old to use the App. By using the App, you represent that you meet this requirement. Users under 18 should have parental consent before creating an account.
+3. License to Use the App
+We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial agricultural purposes, in accordance with these Terms. You may not sell, transfer, or sublicense this license to any third party.
+4. User Accounts
+To access certain features, you may need to create an account. You agree to:
+Provide accurate and complete information during registration
+Keep your login credentials confidential and secure
+Notify us immediately of unauthorized access or use of your account
+Accept responsibility for all activities that occur under your account
+Maintain accurate contact information for password recovery
+We reserve the right to suspend or terminate accounts that violate these Terms or engage in suspicious activity.
+5. Prohibited Activities
+You agree not to:
+Use the App for unlawful, illegal, or unethical purposes
+Attempt to reverse-engineer, decompile, modify, or disrupt the App
+Upload harmful, abusive, defamatory, or infringing content
+Exploit the App for commercial gain without prior permission
+Use automated tools or bots to scrape data or bypass security measures
+Harass, threaten, or abuse other users
+Impersonate any person or organization
+Transmit malware, viruses, or harmful code
+Violate agricultural or pesticide regulations in your jurisdiction
+6. Intellectual Property
+All content, trademarks, logos, code, algorithms, machine learning models, and materials within the App are owned by or licensed to KAPPI. This includes:
+The disease detection ML models (ResNet50 and MobileNetV2 U-Net)
+The application interface and user experience design
+All proprietary technology and methods
+You may not copy, distribute, modify, or create derivative works without prior written consent. You retain ownership of images and data you upload, but grant KAPPI a perpetual license to use them for service improvement and aggregated research.
+7. Image Uploads and Data
+When you upload coffee leaf images:
+You confirm you have the right to upload and share these images
+You grant KAPPI a worldwide, perpetual, royalty-free license to use images for disease detection, model training, and service improvement
+Images are encrypted during transfer and storage
+Images are stored in Cloudinary cloud servers
+KAPPI may use anonymized aggregated data for agricultural research
+You can delete uploaded images and scan records from your history at any time.
+8. In-App Purchases
+The App is currently provided free of charge. If we introduce premium features or paid services in the future:
+Purchases are processed through the app store (Apple App Store or Google Play)
+Purchases are generally non-refundable unless required by law or app store policy
+Prices may change with 30 days' notice
+Billing is managed by the respective app store platform
+9. Privacy Policy
+Your use of the App is also governed by our Privacy Policy, which describes how we collect, use, and protect your personal information, including:
+Location data (GPS coordinates)
+Email and account credentials
+Uploaded images and scan history
+Authentication data from social logins
+By using the App, you agree to the collection and use of information as described in the Privacy Policy. Data is encrypted and stored securely in MongoDB Atlas and Cloudinary.
+10. Third-Party Services
+The App integrates with third-party services, including:
+Firebase Authentication (user login and credential management)
+Cloudinary (image storage and CDN delivery)
+Nodemailer (email delivery for OTP and password recovery)
+Social Login Providers (Google, Facebook)
+We are not responsible for the content, policies, practices, or security of third-party platforms. You agree to review their terms and privacy policies independently.
+11. Machine Learning Disclaimers
+Important: KAPPI provides a decision-support tool, not professional agricultural or medical advice. You acknowledge that:
+Disease detection results are estimates based on machine learning models
+Results may not be 100% accurate and depend on image quality, lighting, and other factors
+You should consult qualified agricultural professionals before making treatment decisions
+KAPPI makes no warranty regarding accuracy, reliability, or suitability of results
+Crop losses or failed treatments are not the responsibility of KAPPI
+Results vary by coffee plant variety, disease type, and environmental conditions
+12. Offline Functionality
+The App can perform disease detection offline using on-device ML models. When you regain internet connection:
+Scan records are automatically synced to our servers
+Failed uploads are retried automatically with exponential backoff
+Maximum 3 retry attempts before marking as failed
+You may manually retry or delete failed scans
+We do not guarantee continuous syncing or data recovery if the device is reset or uninstalled without backing up data.
+13. Limitation of Liability
+To the fullest extent permitted by law, KAPPI is not liable for:
+Any indirect, incidental, special, consequential, or punitive damages
+Loss of profits, revenue, data, or business opportunities
+Damage to crops or loss of agricultural yield from disease misidentification
+Errors, interruptions, or loss of function in the App
+Damages resulting from unauthorized access or use of your account
+Losses from third-party service outages or failures
+Damage or loss resulting from device malfunction or factory reset
+Use the App at your own risk. In no case shall our total liability exceed the amount paid by you in the preceding 12 months (or $0 if no payment was made).
+14. Disclaimer
+The App is provided "as is" and "as available," without warranties of any kind, whether express or implied, including:
+Merchantability or fitness for a particular purpose
+Accuracy, completeness, or reliability of disease detection
+Uninterrupted or error-free operation
+Compatibility with all devices
+Availability of offline or cloud features
+15. Data Encryption and Security
+KAPPI employs industry-standard security measures:
+HTTPS/TLS encryption for all data in transit
+AES-256 encryption for sensitive data at rest (GPS, addresses)
+Bcrypt password hashing with 10 salt rounds
+JWT token-based authentication with auto-refresh
+Rate limiting on sensitive endpoints to prevent abuse
+You are responsible for maintaining the security of your login credentials and account.
+16. Termination
+We may suspend or terminate your access at any time without notice if:
+You violate these Terms or applicable laws
+You engage in fraud, abuse, or harmful activity
+It is necessary for security, legal compliance, or system integrity
+You have not accessed the App for more than 12 months
+Upon termination, your right to use the App ceases immediately. Your data will be soft-deleted and permanently removed after 90 days unless you request earlier deletion.
+17. Changes to Terms
+We may modify these Terms at any time. Updates will be posted within the App or at our website. Continued use of the App after changes means you accept the updated Terms. For significant changes, we will notify users in advance where reasonably possible.
+18. Location Data and Privacy
+The App may request permission to access your device's GPS location. Location data is:
+Encrypted before storage
+Used to create disease distribution maps and provide location context
+Not shared with third parties for commercial purposes
+Controlled by you—you can disable location sharing in app settings
+19. Geolocation Restrictions
+The App is intended for global use, particularly in coffee-growing regions. Users in regions with strict data protection laws (EU GDPR, California CCPA, etc.) must comply with local regulations. We are not liable for violations of local laws that result from your use of the App.
+20. Governing Law
+These Terms are governed by the laws of the Philippines, without regard to conflict-of-law principles. Any legal action must be brought in the courts of the Philippines, and you consent to exclusive jurisdiction and venue in these courts.
+21. Dispute Resolution
+Before initiating legal action, you agree to attempt good-faith negotiation with us. Disputes shall be resolved in accordance with Philippine law.
+22. Indemnification
+You agree to indemnify, defend, and hold KAPPI harmless from any claims, damages, losses, or expenses arising from:
+Your violation of these Terms
+Your use of the App in violation of law
+Your agricultural decisions based on App results
+Images or data you upload
+Unauthorized access to your account by third parties
+23. Severability
+If any provision of these Terms is found invalid or unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force.
+24. Entire Agreement
+These Terms, together with our Privacy Policy, constitute the entire agreement between you and KAPPI and supersede all prior agreements and understandings.
+25. Contact Us
+For questions about these Terms or to report violations, contact us at:Email: support@kappi-app.com
+In-App Support: Settings → Help & Support
+Response Time: We aim to respond within 48 business hours
+26. Acknowledgment
+By downloading and using KAPPI, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.

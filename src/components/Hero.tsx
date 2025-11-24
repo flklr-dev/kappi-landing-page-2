@@ -1,11 +1,43 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-farmer.jpg";
 
 const Hero = () => {
+  const navLinks = [
+    { name: "Features", href: "#features" },
+    { name: "Team", href: "#team" },
+    { name: "Terms & Conditions", href: "/terms-and-conditions" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+  ];
+
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-background overflow-hidden">
+    <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
+      {/* Dot Pattern Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
+      
+      {/* Header */}
+      <header className="absolute top-0 left-0 right-0 z-20 py-6 px-6 md:px-12 lg:px-24">
+        <div className="flex justify-between items-center">
+          <div className="text-2xl font-bold text-foreground" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>KAPPI</div>
+          <nav className="hidden md:block">
+            <ul className="flex space-x-8">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Button variant="ghost" className="md:hidden text-foreground">
+            Menu
+          </Button>
+        </div>
+      </header>
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -34,29 +66,29 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex-grow flex items-center justify-center">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Content Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-8"
+            className="space-y-8 pt-16"
           >
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
-              Protect Your Coffee Crops with{" "}
-              <span className="text-primary">AI-Powered</span> Disease Detection
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight tracking-tight" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+              Protect Your Coffee with<br />
+              <span className="bg-gradient-to-r from-emerald-500 to-emerald-700 bg-clip-text text-transparent">AI Precision.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               KAPPI helps coffee farmers identify plant diseases early and take
               timely action to save their harvest
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <Button
                 variant="hero"
                 size="hero"
@@ -86,82 +118,6 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap items-center gap-6 pt-6 border-t border-border/50"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">10k+</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Active Users</p>
-                  <p className="text-xs text-muted-foreground">Coffee farmers worldwide</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-accent">98%</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Accuracy</p>
-                  <p className="text-xs text-muted-foreground">Disease detection rate</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Image Column */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative"
-          >
-            <motion.div
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="relative"
-            >
-              {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-elevated">
-                <img
-                  src={heroImage}
-                  alt="Coffee farmer using KAPPI app to detect plant diseases"
-                  className="w-full h-auto object-cover"
-                />
-                
-                {/* Overlay Gradient for better contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent" />
-              </div>
-
-              {/* Floating Badge */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-card border border-border rounded-2xl shadow-elevated p-6 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">Real-time Detection</p>
-                    <p className="text-xs text-muted-foreground">Instant results in seconds</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
