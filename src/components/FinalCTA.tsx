@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download, PlayCircle } from "lucide-react";
+import { Download } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -63,46 +63,7 @@ const FinalCTA = () => {
               <Download className="w-5 h-5" />
               Download Now
             </Button>
-
-            <Button
-              variant="heroSecondary"
-              size="hero"
-              className="group"
-              onClick={() => {
-                // Request demo functionality
-                alert("Demo request feature coming soon!");
-              }}
-            >
-              <PlayCircle className="w-5 h-5" />
-              Request a Demo
-            </Button>
           </div>
-
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto pt-12 border-t border-border/50"
-          >
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary mb-2">10k+</p>
-              <p className="text-sm text-muted-foreground">Active Users</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary mb-2">98%</p>
-              <p className="text-sm text-muted-foreground">Accuracy Rate</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</p>
-              <p className="text-sm text-muted-foreground">Diseases Detected</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</p>
-              <p className="text-sm text-muted-foreground">Support Available</p>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

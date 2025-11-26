@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
+import heroLeaves from "@/assets/leaf-falling.png";
 
 const Hero = () => {
   const navLinks = [
@@ -12,6 +13,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
+      {/* Leaf Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <img 
+          src={heroLeaves} 
+          alt="Falling leaves background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       {/* Dot Pattern Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
       
