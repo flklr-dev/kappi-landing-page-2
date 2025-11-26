@@ -135,7 +135,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-background/70">
-              © {currentYear} KAPPI - Kape Plant Protection Intelligence. All rights reserved.
+              © {currentYear} KAPPI - KapTeam. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Button
