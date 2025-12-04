@@ -6,7 +6,7 @@ const developers = [
     name: "Jenny Babe C. Arac",
     role: "Project Manager & Backend Developer",
     responsibilities: "API development, database management, and project coordination",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dev1",
+    image: "https://media1.tenor.com/m/g9UQqenQHRcAAAAC/kween-yasmin-yasmin-asistido.gif",
   },
   {
     name: "Kit Adrian B. Diocares",
@@ -18,7 +18,7 @@ const developers = [
     name: "Francis Lloyd G. Catog",
     role: "Front Developer & Quality Assurance",
     responsibilities: "Frontend development, UI/UX design, and quality assurance testing",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=dev3",
+    image: "https://philnews.ph/wp-content/uploads/2019/03/ed-caluag.jpg",
   },
 ];
 
@@ -26,7 +26,7 @@ const adviser = {
   name: "Dr. Lanie Laureano",
   title: "Associate Professor of Information Technology",
   role: "Providing technical guidance and industry expertise for the KAPPI project development",
-  image: "https://media.licdn.com/dms/image/v2/D5603AQGC3wu6zBkeRg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1689111500331?e=1765411200&v=beta&t=Uy8Ib1uj8E2tMcNHske8yzSZ7971QoLamAwsQV2wUnY",
+  image: "https://media.licdn.com/dms/image/v2/D5603AQFYzyVmVXZ9nQ/profile-displayphoto-crop_800_800/B56ZrAzJbdHAAI-/0/1764171225690?e=1766016000&v=beta&t=cyW-1Armr4KFu0dHgCES3eSoXIMTQEUgMylOXwM-LpI",
 };
 
 const Team = () => {

@@ -1,22 +1,30 @@
 import { motion } from "framer-motion";
-import { Leaf } from "lucide-react";
+// Import disease images
+import leafRustImg from "@/assets/coffee-leaf-rust.png";
+import leafSpotImg from "@/assets/leaf-spot-overview.jpg";
+import brownSpotImg from "@/assets/brownspot.png";
+import sootyMoldImg from "@/assets/sooty-mold-overview.jpg";
 
 const diseases = [
   {
     name: "Leaf Rust",
     description: "Fungal disease causing yellow-orange spots on coffee leaves",
+    image: leafRustImg,
   },
   {
     name: "Leaf Spot",
     description: "Dark spots on leaves that can lead to defoliation",
+    image: leafSpotImg,
   },
   {
     name: "Brown Spot",
     description: "Brown lesions on leaves affecting plant health",
+    image: brownSpotImg,
   },
   {
     name: "Sooty Mold",
     description: "Black fungal growth on leaves reducing photosynthesis",
+    image: sootyMoldImg,
   },
 ];
 
@@ -49,7 +57,14 @@ const Diseases = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="space-y-3">
-                <Leaf className="w-8 h-8 text-zinc-400" strokeWidth={1.5} />
+                {/* Left-aligned disease image with uniform sizing */}
+                <div className="flex justify-start h-40 overflow-hidden">
+                  <img 
+                    src={disease.image} 
+                    alt={`${disease.name} on coffee plant`}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
                 <h3 className="text-lg font-semibold text-zinc-900">
                   {disease.name}
                 </h3>
