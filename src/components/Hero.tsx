@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
 import heroLeaves from "@/assets/leaf-falling.png";
+import kappiLogo from "@/assets/kappi-logo.png";
 
 const Hero = () => {
   const navLinks = [
@@ -28,7 +29,10 @@ const Hero = () => {
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-20 py-6 px-6 md:px-12 lg:px-24">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-foreground" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>KAPPI</div>
+          <div className="flex items-center gap-3">
+            <img src={kappiLogo} alt="KAPPI Logo" className="h-8 w-8" />
+            <div className="text-2xl font-bold text-foreground" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>KAPPI</div>
+          </div>
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
               {navLinks.map((link) => (
@@ -103,13 +107,12 @@ const Hero = () => {
                 variant="hero"
                 size="hero"
                 className="group"
-                onClick={() => {
-                  // Scroll to download section or open app store
-                  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-                }}
+                asChild
               >
-                <Download className="w-5 h-5" />
-                Download KAPPI App
+                <a href="https://github.com/flklr-dev/kappi/releases/download/v1.0/kappi-app.apk" download>
+                  <Download className="w-5 h-5" />
+                  Download KAPPI App
+                </a>
               </Button>
 
               <Button

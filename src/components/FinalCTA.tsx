@@ -41,11 +41,11 @@ const FinalCTA = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Start Protecting Your Coffee Plants{" "}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+            Start Protecting Your Coffee Plants<br />
             <span className="text-primary">Today</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto leading-relaxed">
             Join thousands of farmers who are already using KAPPI to increase their crop yield
             and protect their livelihoods
           </p>
@@ -55,13 +55,12 @@ const FinalCTA = () => {
               variant="hero"
               size="hero"
               className="group"
-              onClick={() => {
-                // Scroll to download section
-                window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-              }}
+              asChild
             >
-              <Download className="w-5 h-5" />
-              Download Now
+              <a href="https://github.com/flklr-dev/kappi/releases/download/v1.0/kappi-app.apk" download>
+                <Download className="w-5 h-5" />
+                Download Now
+              </a>
             </Button>
           </div>
         </motion.div>
